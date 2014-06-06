@@ -6,13 +6,13 @@
         var someValue = 24;
         var otherValue = 23;
 
-        if (someValue < 30){
+        if (someValue < 30) {
             alert("first case");
         }
-        else if (someValue > 30){
+        else if (someValue > 30) {
             alert("Second case");
         }
-        else if (someValue === 24){
+        else if (someValue === 24) {
             alert ("Third Case"); // won't fire due to either first or second case would be true and then fired. So it won't need to fire the third one
         }
         else {
@@ -27,8 +27,19 @@
             alert("sixth case"); // || is 'OR', fire alert when one of them is true
         }
 
+        var myResult = "";
+        myResult = (someValue === 24) ? "equal" : "not equal";
+        alert(myResult); // It is another way to do the 'IF' condition statement
 
+        // falsey values are: false, underfined, 0, or NaN, Nil (Empty string);
+        // NaN is "Not an Number"
 
+        myResult = (3 == "3") ? "true" : "false"; //true
+        myResult = (3 === "3") ? "true" : "false"; //false
+
+        //It also applies to != and !==.
+        //because == and != do implicit type coersion
+        //Many Js experts say they are 'evil code' and 'should be avoided at all costs, unless you intentionally to do so'
 
   </script>
 </head>
