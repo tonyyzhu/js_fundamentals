@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>6. Conditional login in JavaScript</title>
+  <script type="text/javascript">
+        var someValue = 24;
+        var otherValue = 23;
+
+        if (someValue < 30){
+            alert("first case");
+        }
+        else if (someValue > 30){
+            alert("Second case");
+        }
+        else if (someValue === 24){
+            alert ("Third Case"); // won't fire due to either first or second case would be true and then fired. So it won't need to fire the third one
+        }
+        else {
+            alert("fourth case"); // catch all case
+        }
+
+        if(someValue > 20 && otherValue > 20){
+            alert("fifth case"); // && is 'AND'. Unless both true then fire the alert
+        }
+
+        if(someValue === 24 || otherValue === 24){
+            alert("sixth case"); // || is 'OR', fire alert when one of them is true
+        }
+
+
+
+
+  </script>
+</head>
+<body>
+  <h1>6. Conditional login in JavaScript</h1>
+</body>
+</html>
