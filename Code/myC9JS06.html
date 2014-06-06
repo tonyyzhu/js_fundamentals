@@ -41,6 +41,39 @@
         //because == and != do implicit type coersion
         //Many Js experts say they are 'evil code' and 'should be avoided at all costs, unless you intentionally to do so'
 
+        var userName = "Rimmer";
+        switch (userName)
+        {
+                case "Lister":
+                    document.write("Care for a good curry?");
+                    break;
+                case "Rimmer":
+                    document.write("Welcome back, smeg head");
+                    break;
+                default:
+                    document.write("Are you an emohawk?");
+                    break;
+
+        }
+
+        var rightNow = new Date();
+        var currentHour = rightNow.getHours();
+        switch(true)
+        {
+            case (currentHour > 8 && currentHour < 12):
+                document.write("Morning, sunshine!");
+                break;
+            case (currentHour === 12):
+                document.write("Lunch time!");
+                break;
+            case (currentHour > 12 && currentHour < 18):
+                document.write("Fight the sitsta!");
+                break;
+            default:
+                document.write("Careful Sparky,  they'll think you're a hard worker!");
+                break;
+        }
+
   </script>
 </head>
 <body>
