@@ -19,7 +19,6 @@
     }
 
     myNewFunction("pardner");
-*/
 
     function add (firstNumber, secondNumber) {
         return firstNumber + secondNumber;
@@ -28,6 +27,36 @@
     var myResult = add(1,2);
     alert(myResult);
 
+    function add() {
+        var tempValue = 0;
+        for (i = 0; i < arguments.length; i++) {
+            tempValue += arguments[i];
+        }
+        return tempValue;
+    }
+
+    var myValue = add(1,2,3,4,5);
+    alert(myValue);
+
+    var addMe = function() {
+        return arguments[0] + arguments[1];
+    } //function literal
+
+    var myNewValue = addMe(1,2);
+    alert(myNewValue);
+    */
+
+/* animalous(? spelling) function below, which used a lot in JQuery;
+   function() {
+        return arguments[0] + arguments[1];
+   }
+   // But, it can't be used in itself, so I have to re-write it in the following ways.
+   */
+
+   var myResult = (function() {
+        return arguments[0] + arguments[1];
+   }) (10,20);
+   alert(myResult);
 
   </script>
 </head>
