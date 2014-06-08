@@ -5,16 +5,34 @@
   <title>JavaScript Functions</title>
   <script type="text/javascript">
 
+/*
   function myNewFunctions() {
     alert("Howdy!");
   }
 
   myNewFunctions();
+*/
+
+/*
+    function myNewFunction(myValue) {
+        alert("Howdy, " + myValue);
+    }
+
+    myNewFunction("pardner");
+*/
+
+    function add (firstNumber, secondNumber) {
+        return firstNumber + secondNumber;
+    }
+
+    var myResult = add(1,2);
+    alert(myResult);
+
 
   </script>
 </head>
 <body>
   <h1>JavaScript Functions</h1>
-  <input type="submit" value="Click me" onclick="myNewFunctions();" />
+  <input type="submit" value="Click me" onclick="myNewFunction();" />
 </body>
 </html>
