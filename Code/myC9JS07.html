@@ -51,12 +51,16 @@
         return arguments[0] + arguments[1];
    }
    // But, it can't be used in itself, so I have to re-write it in the following ways.
-   */
 
    var myResult = (function() {
         return arguments[0] + arguments[1];
    }) (10,20);
    alert(myResult);
+*/
+
+    alert((function() {
+        return arguments[0] + arguments[1];
+   }) (100,20));
 
   </script>
 </head>
