@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Iternation Statements in JavaScript</title>
+  <script type="text/javascript">
+
+  var playList = [];
+  playList[0] = "One For The Team";
+  playList[1] = "The Joy Formidable";
+  playList[2] = "Young the Giant";
+  playList[3] = "Washed out";
+
+/*
+  //while
+  var i = 0;
+  while (i < playList.length) {
+    document.write ("<br />Now Playing: "+ playList[i]);
+    i++;
+  }
+
+    // do -while
+    var someResult = false;
+    do {
+        document.write("Will print AT LEAST once!");
+    }
+    while(someResult);
+
+    // for loop
+    for (var i = 0; i < playList.length; i++) {
+       document.write("<br />Now Playing: " + playList[i]);
+    }
+
+    //for ... in
+    for (i in playList) {
+        document.write("<br />Now Playing: "+ playList[i]);
+    }
+    // The "in" magically replaced var statement, i++, etc; to go through the whole Array
+    // Otherwise it shouldn't be used this way
+*/
+
+    for (var i = playList.length - 1; i > -1; i--) {
+        document.write("<br />Now Playing: " + playList[i]);
+    }
+    // This way it loops but the last element of Array displays first. Reversed Order Display...
+
+  </script>
+</head>
+<body>
+  <h1>Iternation Statements in JavaScript</h1>
+</body>
+</html>
