@@ -45,8 +45,7 @@
     }) ();
 
     alert('outside the function, the scope is: ' + myScope);
-*/
-
+//---------------------------------
     //global variable changes affects in global scope
     myScope = "global";
 
@@ -57,6 +56,24 @@
     }) ();
 
     alert('outside the function, the scope is: ' + myScope);
+//---------------------------------------
+    //further example of functional variables
+    //myScope = "global";
+
+    (function() {
+        if (true) {
+            var myScope = "Functional";
+        }
+        //myScope = "re-assign the value of global variable inside function will change it in global scope"
+        alert('inside the function, the scope is: ' + myScope); //still useable
+    }) ();
+
+    alert('outside the function, the scope is: ' + myScope); //Won't work this time - no global variable defined here, but not return error here as well
+*/
+
+    // All global variables belongs to DOM (document object model), or window
+    myScope = "global";
+    alert('window.myScope: ' + window.myScope);
 
   </script>
 </head>
