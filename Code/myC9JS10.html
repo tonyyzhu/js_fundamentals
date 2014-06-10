@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Global Scope versus Function Scope</title>
+  <script type="text/javascript">
+
+/*
+    if (true) {
+        var x = 5;
+    }
+    // Unlike normal regional variable in a normal programming language,
+    // that x can only be used inside the function code, x can now be used
+    // outside of the function area, which is why it is called functional variable
+    alert(x);
+*/
+
+    //This is a tricky one of unique Javascript grammer:
+    //If you use var statement to define a variable, it is a functional variable
+    //If you just assign a value to a variable without using var statement to define it, it is a global variable
+    myScope = "global";
+
+    (function() {
+        alert('inside the function, the scope is: ' + myScope);
+    }) ();
+
+    alert('outside the function, the scope is: ' + myScope);
+
+  </script>
+</head>
+<body>
+  <h1>Global Scope versus Function Scope</h1>
+</body>
+</html>
