@@ -24,4 +24,24 @@ var utilities = {
 
 var i_am_empty = {};
 
-utilities.printAllMembers(i_am_empty);
+//utilities.printAllMembers(i_am_empty);
+
+var planet = {
+    id: 34,
+    name: "Imtempesta Nox",
+    faction: {
+        factionId: 2,
+        name: "Nex",
+        notification: function() {
+            document.write("Nex alliance ... unite!");
+        }
+    },
+    cities: [
+        {locationId: 15, name: "Gladius"},
+        {locationId: 16, name: "Chalybs"},
+        {locationId: 17, name: "Ensis"}
+    ]
+};
+
+planet.faction.notification();
+document.write("<br /> " + planet.cities[1].name);
