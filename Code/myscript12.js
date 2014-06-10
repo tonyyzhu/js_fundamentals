@@ -63,10 +63,26 @@ if (typeof planet.defense === "undefined") {
 }
 
 document.write(planet.defense);
-*/
 
 //test out for loop here:
 for (member in planet) {
-    document.write("<br />" + "==> " + planet[member]);
+    document.write("<br />" + member + "==> " + planet[member]);
+}
+*/
+
+//Because Javascript does not have the concept of 'Class',
+//you have to use the 'constructor' method to build a new object:
+
+function car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
 }
 
+var myCar = new car("eagle", "Talon TSi", 1993);
+var myOtherCar = new car("Dodge", "Dart", 1971);
+
+alert(myCar.model);
+alert(myOtherCar.model);
+
+//Just remember: Javascript is a 'classless' language !!!
