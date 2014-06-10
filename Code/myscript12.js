@@ -51,9 +51,22 @@ document.write("<br /> " + planet.cities[1].name);
 document.write("<br />" + planet.name);
 planet.name = "Vultus";
 document.write("<br />" + planet.name);
-*/
 
 //set reference to planet, and use its properties:
 var z = planet;
 document.write(z.name);
+
+// Add another peremeter into the object outside of it,
+// after verify its 'typeof' as 'undefined' -- so it is a new perameter and not overwrite an existing one
+if (typeof planet.defense === "undefined") {
+    planet.defense = "Ion Canon";
+}
+
+document.write(planet.defense);
+*/
+
+//test out for loop here:
+for (member in planet) {
+    document.write("<br />" + "==> " + planet[member]);
+}
 
