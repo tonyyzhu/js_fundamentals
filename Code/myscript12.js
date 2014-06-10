@@ -46,9 +46,14 @@ var planet = {
 /* Complex Example below:
 planet.faction.notification();
 document.write("<br /> " + planet.cities[1].name);
-*/
 
 // rename the planet
 document.write("<br />" + planet.name);
 planet.name = "Vultus";
 document.write("<br />" + planet.name);
+*/
+
+//set reference to planet, and use its properties:
+var z = planet;
+document.write(z.name);
+
