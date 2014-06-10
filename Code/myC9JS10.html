@@ -34,7 +34,6 @@
     }) (); // inside alert still works
 
     alert('outside the function, the scope is: ' + myScope); //now this line doesn't work, because it shouldn't
-*/
 
     //Let's try both, in which case inside function it would overwrite global variable
     //but ouside alert fires with global variable
@@ -43,10 +42,21 @@
     (function() {
         var myScope = "Functional";
         alert('inside the function, the scope is: ' + myScope);
-    }) (); // inside alert still works
+    }) ();
 
     alert('outside the function, the scope is: ' + myScope);
+*/
 
+    //global variable changes affects in global scope
+    myScope = "global";
+
+    (function() {
+        //var myScope = "Functional";
+        myScope = "re-assign the value of global variable inside function will change it in global scope"
+        alert('inside the function, the scope is: ' + myScope);
+    }) ();
+
+    alert('outside the function, the scope is: ' + myScope);
 
   </script>
 </head>
