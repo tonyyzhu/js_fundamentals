@@ -20,4 +20,8 @@ var utilities = {
     }
 }
 
-utilities.printAllMembers(batwing);
+//utilities.printAllMembers(batwing);
+
+var i_am_empty = {};
+
+utilities.printAllMembers(i_am_empty);
