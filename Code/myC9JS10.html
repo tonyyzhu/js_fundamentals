@@ -13,7 +13,6 @@
     // that x can only be used inside the function code, x can now be used
     // outside of the function area, which is why it is called functional variable
     alert(x);
-*/
 
     //This is a tricky one of unique Javascript grammer:
     //If you use var statement to define a variable, it is a functional variable
@@ -25,6 +24,17 @@
     }) ();
 
     alert('outside the function, the scope is: ' + myScope);
+*/
+
+    // Let's move myScope into the function, then outside alert won't fire, as it shouldn't be fired:
+    //myScope = "global";
+
+    (function() {
+        var myScope = "Functional";
+        alert('inside the function, the scope is: ' + myScope);
+    }) (); // inside alert still works
+
+    alert('outside the function, the scope is: ' + myScope); //now this line doesn't work, because it shouldn't
 
   </script>
 </head>
