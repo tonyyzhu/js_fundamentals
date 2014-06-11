@@ -42,7 +42,7 @@ var secondParagraph = listOfParagraphs[1];
 alert(secondParagraph.innerHTML);
 */
 
-// Navigator through the DOM Object Tree, using following examples:
+/* Navigator through the DOM Object Tree, using following examples:
 var myElement = document.getElementById('second');
 alert(myElement.parentNode.nodeName);   // Display the parent object name, which is 'body'
 alert(myElement.firstChild);
@@ -50,5 +50,15 @@ alert(myElement.childNodes[0].nodeValue);
 alert(myElement.lastChild.nodeType);
 alert(myElement.nextSibling);
 alert(myElement.nextSibling.nodeName);
+alert(myElement.previousSibling);
+*/
+
+// Modify object's properties inside the DOM Tree:
+var anchor = document.getElementById('myAnchor');
+var anchorDestination = anchor.href;  // Not every browser allows you to refer to this property;
+alert(anchorDestination);
+
+anchor.href = "http://www.learnvisualstudio.net";
+alert(anchor.href);
 
 }
