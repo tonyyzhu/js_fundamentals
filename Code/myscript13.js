@@ -32,6 +32,7 @@ function runTheExample() {
     // Only when THIS JS file is used and this statement is enabled, then this change is real/displayed.
 */
 
+/*  LIST usage in JavaScript:
 var listOfParagraphs = document.getElementsByTagName('p');
 
 //alert(listOfParagraphs.length); //display how many Paragraphs the HTML file has
@@ -39,5 +40,15 @@ var listOfParagraphs = document.getElementsByTagName('p');
 var secondParagraph = listOfParagraphs[1];
 
 alert(secondParagraph.innerHTML);
+*/
+
+// Navigator through the DOM Object Tree, using following examples:
+var myElement = document.getElementById('second');
+alert(myElement.parentNode.nodeName);   // Display the parent object name, which is 'body'
+alert(myElement.firstChild);
+alert(myElement.childNodes[0].nodeValue);
+alert(myElement.lastChild.nodeType);
+alert(myElement.nextSibling);
+alert(myElement.nextSibling.nodeName);
 
 }
