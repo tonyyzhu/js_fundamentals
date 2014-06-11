@@ -14,7 +14,7 @@ function runTheExample() {
 */
 
 function runTheExample() {
-
+/*
     var myElement = document.getElementById('second');
 
     var myNodeName = myElement.nodeName;
@@ -25,6 +25,8 @@ function runTheExample() {
         // It is 'dangerous' to continue to use 'innerHTML' after HTML5 comes out.
         // People would rely on JQuery to replace 'innerHTML', due to various browser support.
     };
-
+*/
+// innerHTML can also be used to change the content of HTML file:
+    document.getElementById('second').innerHTML = "See how I set the text here?"
 
 }
