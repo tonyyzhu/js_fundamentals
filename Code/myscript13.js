@@ -1,3 +1,10 @@
+// Using window.onload event, so that all Javascript functions/files will only be loaded/used
+//  after all files are loaded into the browser's memory, and therefore DOM Tree has been
+//  estiblished inside the browser's memory.
+//  This can avoid refering to an object before it was created inside browser's memory or DOM Tree
+//  The downside is that user has to wait until all those slow downloading of images and other large files
+//  to finish, before this JS file can be functioning, which could be really slow to respond;
+//  And if user alreayd starts to click on buttons etc, they won't get any responses due to JS late to the party.
 window.onload = function() {
     //var clickMeButton = document.getElementById('clickMe');
     //clickMeButton.onclick = runTheExample;
@@ -13,8 +20,9 @@ function runTheExample() {
 }
 */
 
-function runTheExample() {
 /*
+function runTheExample() {
+
     var myElement = document.getElementById('second');
 
     var myNodeName = myElement.nodeName;
@@ -51,7 +59,7 @@ alert(myElement.lastChild.nodeType);
 alert(myElement.nextSibling);
 alert(myElement.nextSibling.nodeName);
 alert(myElement.previousSibling);
-*/
+
 
 // Modify object's properties inside the DOM Tree:
 var anchor = document.getElementById('myAnchor');
@@ -67,3 +75,4 @@ alert(anchor.href);
 // But, Never do all above ways when you can use JQuery !!!
 
 }
+*/
