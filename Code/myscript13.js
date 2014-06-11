@@ -1,3 +1,4 @@
+/*
 // Using window.onload event, so that all Javascript functions/files will only be loaded/used
 //  after all files are loaded into the browser's memory, and therefore DOM Tree has been
 //  estiblished inside the browser's memory.
@@ -13,12 +14,13 @@ window.onload = function() {
     document.getElementById('clickMe').onclick = runTheExample;
 
 }
+*/
 
-/*
+
 function runTheExample() {
     alert('running the example');
 }
-*/
+
 
 /*
 function runTheExample() {
