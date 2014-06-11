@@ -61,4 +61,9 @@ alert(anchorDestination);
 anchor.href = "http://www.learnvisualstudio.net";
 alert(anchor.href);
 
+// In the older version of browsers, when not using JQuery, doing above similiar to following:
+// anchor.setAttribute('href', 'http://www.learnvisualstudio.net');
+// anchor.getAttribute('href');
+// But, Never do all above ways when you can use JQuery !!!
+
 }
