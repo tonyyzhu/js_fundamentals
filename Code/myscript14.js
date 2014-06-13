@@ -1,17 +1,49 @@
 /*
 document is the entire DOM
 ready: when DOM is loaded and ready
-function(): handler function: when DOM ready, exec the function()
+function(): event handler function: when DOM ready, exec the function()
 which is alert "this works!"
 
+// First and full formal usage of jQuery:
 jQuery(document).ready(function() {
     // start up code goes here
     alert("this works!");
 })
-*/
 
 // use '$' sign as shortcut of 'jQuery'
 $(document).ready(function() {
     // start up code goes here
     alert("this works!");
 })
+*/
+
+// further simplifying -- omitting those commonly used keywords to shorten codes:
+$(function() {
+    // start up code goes here
+    alert("this works!");
+})
+
+/*
+//JQuery grammer:
+//below is JQuery objects (which is the objects of DOM):
+$('.importantText')
+$('#myFirstParagraph')
+$('p')
+
+// Create HTML on the fly and then pass it onto DOM:
+$('<div id="badge"><img src="badge.gif" alt="Badge earned for Achievement"></div>')
+
+$.myCustomMethod = function() {alert('hi');};
+
+// Use JQuery namespace instead of Global namespace, <so that they don't 'polute' the global namespace>
+$.listBox = {
+    show: function() {};
+    hide: function() {};
+    position: function() {};
+    initiate: function() {};
+};
+
+ */
+
+// At Least Read Core API Reference Document from www.jQuery.com;
+// before you can use it efficiently
