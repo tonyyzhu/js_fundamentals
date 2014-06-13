@@ -57,6 +57,10 @@ $(function() {
     $("#first").append("<h3>... for your to ponder ...</h3>");
     //before, after, insertBefore, insertAfter work OUTSIDE the given selection
 
+    // change web link object's target address via JQuery
+    $("#myAnchor").attr("href", "http://channel9.msdn.com");
 
+    // add reference to CSS file object 'standout'
+    $("#title").addClass("standout");
 
 })
