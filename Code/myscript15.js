@@ -53,8 +53,14 @@ $ (function() {
     // Select from h1 to h6 elements:
     //$(':header').addClass('highlight');
     // Even add content to empty paragraphs:
-    $('p:empty').text('You seemed lonely so I gave you some text');
+    //$('p:empty').text('You seemed lonely so I gave you some text');
 
+    // Unlike Child(which is 1-based counting method), even/odd are counted from 0 onwards,
+    // So in this case, 'even' means 1, 3, 5 in the list
+    //$('li:even').addClass('highlight');
+    // So in this case, 'odd' means 0(not exist here), 2, 4, 6 in the list
+    $('li:odd').addClass('highlight');
+    // ==== Pay attention to this section ! =====
 
     // All above can be found from searching "Selectors" results of http://api.jquery.com
 
