@@ -12,7 +12,13 @@ $ (function() {
     // Disable after verified
 
     // By class
-    $('.chosen').addClass('highlight');
+    //$('.chosen').addClass('highlight');
     // It is amazing that you can add class after selecting its old class...
+
+    // use ',' to select more than one element for addClass, or Combination as Bob calls it:
+    $('#first, .chosen').addClass('highlight');
+    // But, .chosen class is not working after above example, why ??
+
+
 
 });
