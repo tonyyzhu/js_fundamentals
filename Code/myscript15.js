@@ -34,10 +34,28 @@ $ (function() {
     // BTW: () after siblings are important, otherwise it won't work.
 
     // Parents
-    $('li:contains("Three")').parent().addClass('highlight');
+    //$('li:contains("Three")').parent().addClass('highlight');
     /* There are two different functions:
     1. parent() is parent of 'li', which is 'ul', so yellow hightlight is only unlisted items;
     2. parents() are parent of 'li' and all its ancesters, that includes the whole HTML tags, so the whole document are hightlighted with yellow background.
     */
+
+    // Child is '1' based, not '0' based as in other languages:
+    //$('li:nth-child(1)').addClass('highlight');
+    // Only 'One' is highlight, which is desired result -- reason out why.
+
+    // By attribute -- Notice the grammer below:
+    //$('p[name="mySecondPara"]').addClass('highlight');
+    // !=
+    //$('p[name!="mySecondPara"]').addClass('highlight');
+    // P tag without name attributes -- only 2 has [name], so it is 1 & 3, which is same as previous result
+    //$('p').not('[name]').addClass('highlight');
+    // Select from h1 to h6 elements:
+    //$(':header').addClass('highlight');
+    // Even add content to empty paragraphs:
+    $('p:empty').text('You seemed lonely so I gave you some text');
+
+
+    // All above can be found from searching "Selectors" results of http://api.jquery.com
 
 });
