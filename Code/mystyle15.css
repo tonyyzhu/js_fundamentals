@@ -1,0 +1,9 @@
+.highlight {
+  background-color: yellow;
+}
+
+// Add this below to test if both class are on, or the later replace previous one:
+.chosen {
+    font-size: x-large;
+}
+// Well, the later was appended on first one, as debug shows, and both works;
