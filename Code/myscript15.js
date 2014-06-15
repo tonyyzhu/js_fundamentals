@@ -19,6 +19,8 @@ $ (function() {
     $('#first, .chosen').addClass('highlight');
     // But, .chosen class is not working after above example, why ??
 
+    // Contains
+   // $('li:contains("Three")').addClass('highlight');
 
 
 });
