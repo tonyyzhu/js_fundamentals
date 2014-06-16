@@ -11,10 +11,20 @@ $(function() {
 
 $(function() {
     $('#success').hide();
+    //Only the below line is added after $('#startover') added:
+    $('#bobhead').addClass('hoverOut');
     var score = 0;
     $('#bobhead').click(function() {
-        score++;
-        $('#score').text(score);
+        score++; //score = score + 1;
+        $('#score').text(score);    // Assign score to text();
         $('#success').show('slow').fadeOut(2000);  // only show after you clicked, then fade away in 2 seconds;
+    });
+
+    $('#startover').hover(function() {
+        score = 0;
+        $('#score').text(score);
+        $('#startover').addClass('hoverIn').removeClass('hoverOut'); //Checkout this one: add one class then remove another
+    }, function () {
+        $('#startover').removeClass('hoverIn').addClass('hoverOut');
     });
 });
