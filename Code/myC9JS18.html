@@ -7,10 +7,32 @@
 </head>
 <body>
   <h1 id="title">18. Unobtrusive JavaScript</h1>
+  <p>
+      This is based on www.webstandards.org; which is appears stopped active work on 2010, and then becomes an education organization instead. Their courses are worth chekcing out
+  </p>
+  <p>
+      It says that there are 4 benefits if using Unobstrusive Javascript techniques:
+  </p>
+  <ol>
+    <li>Usability: It should just work without user's attention</li>
+    <li>Graceful Degradation: If it doesn't work, it should just fail silently and go away, without user attention or impact to other contents of the page</li>
+    <li>Accessibility: If js script failed, it shouldn't stop delivering other HTML contents, although without those add-ons from the js file</li>
+    <li>Separation: For future or other developers, all js scripts &. resources should be maintained separately, without impact or stop other js scripts' work</li>
+  </ol>
+  <p>
+      Three techniques will be shown here: Separation of Behavior from Markup, Namespace(a.k.a "Global Abatement"), Degrading Gracefully.
+  </p>
+  <ul>
+    <li>Separation of Behavior from Markup: Separate HTML Content from Js Behavior -- Already done using "&ltscript type="text/javascript" <strong>src="myscript18.js"</strong>&gt&lt/script&gt" </li>
+    <li>Namespace: to avoid conflicts with other Js scripts, library or other programs, try not to make too much global functions or global variables. Just put them inside one global object, and call the attributes of that object for your method or data usage. So by putting all your code under this global object, you effectively reduce your footprint under global scope. BTW, there is another method called "Modular Pattern", which is more popular but not talked about here (more advanced technique you should search for yourself). This is very necessary when you are working on a larger project that requires more than one programmers. </li>
+    <li>Degrading Gracefully: see Js file for details</li>
+ </ul>
   <p id="main">
         <!--img src="plus-8.png" alt="Click me to see the paragraph" id="clickMe" / -->
         <!-- Disable above, so that it would only appear when Js add that plus symbel on -->
   </p>
   <p id="message">You should see this whether JavaScript is on or off.</p>
+  <br />
+  <p>BTW, I found this is a better way to keep my notes for learning</p>
 </body>
 </html>
